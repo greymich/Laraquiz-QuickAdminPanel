@@ -20,6 +20,17 @@ DB_PASSWORD=
 - __Pass__: password  
 
 
+Configurations
+---
+Nginx: `.docker/etc/nginx` 
+
+SSL: `.docker/etc/ssl` 
+
+To use other certicates, please visit this folder and change certs, chained certs or other advanced configuration please refer to nginx folder.
+
+FPM: `.docker/etc/php` 
+
+
 # LaraQuiz: Laravel 5.6 based quiz system
 
 It is a demo project for demonstrating what can be generated with [QuickAdminPanel](https://quickadminpanel.com) tool.
