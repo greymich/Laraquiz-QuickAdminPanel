@@ -1,16 +1,23 @@
 # Deployment notes
 
 1. cp .env.example .env
-1. configure .env
-	-- set database. user and passwords, during container creation, the password is used
+1. configure .env, database will be created according to the environment set on first creation
+```
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=quiz
+DB_USERNAME=
+DB_PASSWORD=
+```
 1. docker-compose up -d
-1. docker-compose exec fpm sh
-	-- cd /var/www
-	-- php artisan key:generate
-	-- php artisan migrate --seed
-1. login with default admin and password
-- __Email__: admin@admin.com
-- __Pass__: password
+1. docker-compose exec fpm sh  
+	$ cd /var/www  
+	$ php artisan key:generate  
+	$ php artisan migrate --seed  
+1. login with default admin and password  
+- __Email__: admin@admin.com  
+- __Pass__: password  
 
 
 # LaraQuiz: Laravel 5.6 based quiz system
